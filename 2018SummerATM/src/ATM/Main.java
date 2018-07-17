@@ -12,7 +12,7 @@ class Select {
 
 class Login {
 	
-	void login() {				// 등록
+	void login() {				// 등록 
 		
 		 
 	}
