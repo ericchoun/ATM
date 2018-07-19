@@ -3,8 +3,8 @@ package edu.yust.ceceom;
 public class Order {
 	int tableNumber;
 	String orderedMenu;
-	int menuPrice;
-	int orderedNumber;
+//	int menuPrice;
+//	int orderedNumber;
 
 	public int getTableNumber() {
 		return tableNumber;
@@ -22,26 +22,27 @@ public class Order {
 		this.orderedMenu = orderedMenu;
 	}
 
-	public int getMenuPrice() {
-		return menuPrice;
-	}
-
-	public void setMenuPrice(int menuPrice) {
-		this.menuPrice = menuPrice;
-	}
-
-	public int getOrderedNumber() {
-		return orderedNumber;
-	}
-
-	public void setOrderedNumber(int orderedNumber) {
-		this.orderedNumber = orderedNumber;
-	}
+//	public int getMenuPrice() {
+//		return menuPrice;
+//	}
+//
+//	public void setMenuPrice(int menuPrice) {
+//		this.menuPrice = menuPrice;
+//	}
+//
+//	public int getOrderedNumber() {
+//		return orderedNumber;
+//	}
+//
+//	public void setOrderedNumber(int orderedNumber) {
+//		this.orderedNumber = orderedNumber;
+//	}
 
 	@Override
 	public String toString() {
-		return "Order [tableNumber=" + tableNumber + ", orderedMenu=" + orderedMenu + ", menuPrice=" + menuPrice
-				+ ", orderedNumber=" + orderedNumber + ", totalPrice=" + menuPrice*orderedNumber + "]";
+		return " "+tableNumber;
+				//"Order [tableNumber=" + tableNumber + ", orderedMenu=" + orderedMenu + ", menuPrice=" + menuPrice
+				//+ ", orderedNumber=" + orderedNumber + ", totalPrice=" + menuPrice*orderedNumber + "]";
 	}
 
 //	public void printOrder() {
