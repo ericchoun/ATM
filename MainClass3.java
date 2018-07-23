@@ -78,10 +78,11 @@ public class MainClass3 {
 				} else {
 					System.out.println("잔액이 부족합니다.");	// 만약 잔액이 출금금액보다 적다면 잔액이 부족하다는 메세지
 					a = money + moneyOut;
+					moneyOut = 0;
 				}
 			}
 			stmt.executeUpdate("update atm set userMoney = '"+a+"' where userID = '"+id+"';");			// 데이터베이스에 잔액정보를 갱신
-			stmt.executeUpdate("insert into "+id+" values (0, "+moneyOut+", "+money+", '"+today+"');");		// 사용자 테이블에 기록 저장
+			stmt.executeUpdate("insert into "+id+" values (0, "+moneyOut+", "+a+", '"+today+"');");		// 사용자 테이블에 기록 저장
 			
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
@@ -162,7 +163,7 @@ public class MainClass3 {
 		
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/practice?useSSL=false&serverTimezone=Asia/Seoul", "root","");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/practice?useSSL=false&serverTimezone=Asia/Seoul", "root","ghdals0426");
 			System.out.println("DB 연결 완료");
 			stmt = conn.createStatement();
 		} catch (ClassNotFoundException e) {
@@ -180,7 +181,6 @@ public class MainClass3 {
 			switch(i) {
 			case 1: 
 				try {
-					
 					Scanner sc1 = new Scanner(System.in);
 					System.out.println("아이디를 입력하세요: ");
 					id = sc1.nextLine();						// 아이디를 id 변수에 저장
